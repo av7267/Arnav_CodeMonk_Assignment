@@ -1,6 +1,6 @@
-# Codemonk Backend Intern Assignment
+# Django Backend API
 
-A robust backend service for managing users and processing large blocks of text to find word frequencies, built with Django, Django REST Framework, PostgreSQL, Redis, and Celery.
+A backend REST API built with Django REST Framework, PostgreSQL, Redis, and Celery for user authentication and asynchronous text processing.
 
 ## Prerequisites
 
@@ -11,8 +11,8 @@ A robust backend service for managing users and processing large blocks of text 
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
-   cd codemonk-backend
+   git clone https://github.com/av7267/django-backend-api.git
+   cd django-backend-api
    ```
 
 2. **Setup Environment Variables:**
@@ -59,7 +59,7 @@ Check the Swagger UI (`/api/schema/swagger-ui/`) for detailed interactive docume
 - `POST /api/v1/paragraphs/` - Submit a large block of text. It is split into paragraphs and processed asynchronously in the background. (Returns 202 Accepted).
 - `GET /api/v1/paragraphs/search/?word=<word>` - Find the top 10 paragraphs where the specific word appears the most.
 
-## Testing Guide (Swagger UI)
+## API Testing(Swagger UI)
 
 Testing the API through the Swagger UI (`/api/schema/swagger-ui/`) is the easiest way to interact with the system. Follow these steps:
 
@@ -89,4 +89,4 @@ Testing the API through the Swagger UI (`/api/schema/swagger-ui/`) is the easies
 1. Expand **`GET /api/v1/paragraphs/search/`** and click **"Try it out"**.
 2. In the `word` parameter field, type a word that exists in the text you submitted.
 3. Click **"Execute"**. You will receive a ranked list of the top 10 paragraphs where the word appears the most!
-# Arnav_CodeMonk_Assignment
+
